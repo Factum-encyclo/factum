@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фактум — Главная</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        #search {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #search input {
+            width: 300px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        #search button {
+            padding: 10px;
+            font-size: 1rem;
+            margin-left: 5px;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #search button:hover {
+            background-color: #005bb5;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function searchArticles() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const articles = document.querySelectorAll('ul li');
+            articles.forEach(article => {
+                const title = article.textContent.toLowerCase();
+                if (title.includes(query)) {
+                    article.style.display = '';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Фактум</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="search">
+            <input type="text" id="search-input" placeholder="Поиск по статьям...">
+            <button onclick="searchArticles()">Поиск</button>
+        </div>
+
+        <h2>Статьи</h2>
+        <ul>
+            <li><a href="articles/ancient_egypt.html">Древний Египет</a></li>
+            <li><a href="articles/ancient_greece.html">Древняя Греция</a></li>
+            <li><a href="articles/ancient_india.html">Древняя Индия</a></li>
+            <li><a href="articles/ancient_rome.html">Древний Рим</a></li>
+            <li><a href="articles/ancient_sumerians.html">Древние шумеры</a></li>
+            <li><a href="articles/egyptian_mythology.html">Мифология Древнего Египта</a></li>
+            <li><a href="articles/greek_mythology.html">Греческая мифология</a></li>
+            <li><a href="articles/greek_olympians.html">Греческие олимпийцы</a></li>
+            <li><a href="articles/greek_heroes.html">Греческие герои</a></li>
+            <li><a href="articles/roman_gods.html">Римские боги</a></li>
+            <li><a href="articles/roman_mythology.html">Римская мифология</a></li>
+            <li><a href="articles/viking_myths.html">Скандинавская мифология</a></li>
+            <li><a href="articles/babylonian_myths.html">Мифы Древнего Вавилона</a></li>
+            <li><a href="articles/mesopotamian_empires.html">Месопотамские империи</a></li>
+            <li><a href="articles/ottoman_empire.html">Османская империя</a></li>
+            <li><a href="articles/political_revolutions.html">Политические революции</a></li>
+            <li><a href="articles/indian_mythology.html">Индийская мифология</a></li>
+            <li><a href="articles/european_renaissance.html">Европейское Возрождение</a></li>
+            <li><a href="articles/ancient_sumerians.html">Шумерская цивилизация</a></li>
+            <li><a href="articles/persian_empire.html">Персидская империя</a></li>
+            <li><a href="articles/egyptian_gods.html">Боги Древнего Египта</a></li>
+            <li><a href="articles/king_arthur.html">Король Артур</a></li>
+            <li><a href="articles/greek_mythology.html">Греческая мифология</a></li>
+            <li><a href="articles/medieval_europe.html">Средневековая Европа</a></li>
+            <li><a href="articles/renaissance.html">Эпоха Возрождения</a></li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Фактум — Энциклопедия знаний</p>
+    </footer>
+</body>
+</html>
+
+
